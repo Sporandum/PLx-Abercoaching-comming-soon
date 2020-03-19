@@ -1,0 +1,137 @@
+@import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
+
+// Colors
+$color__primary: #00567C;
+$color__primary--hover: #03415B;
+$color__secondary: #00B4E0;
+$color__white: #fff;
+$color__white--pale: #FAFAFA;
+$color__grey: #E5EBED;
+$color__black: #06131E;
+
+$border__values: 1px solid rgba(0, 0, 0, 0.16);
+
+// Breakpoints
+$md: 600px;
+
+// Global
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+// Soon Module
+.soon {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    border-bottom: $border__values;
+    padding: 1rem;
+
+    img {
+      max-width: 250px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__container {
+    margin: auto 0;
+
+    &>* {
+      padding: 1rem;
+      margin: 0;
+    }
+  }
+
+
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    color: $color__primary;
+    @include breakpoint($md) {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.6;
+    @include breakpoint($md) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__site-status {
+    background: $color__primary;
+    color: $color__white--pale;
+    padding: 2rem 1rem;
+    font-weight: 400;
+    @include breakpoint($md) {
+      margin: 2rem 0;
+      font-size: 1.5rem;
+    } 
+  }
+
+  &__mobile {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $color__primary;
+    text-align: center;
+    @include breakpoint($md) {
+      font-size: 2rem;
+    } 
+  }
+
+  &__email {
+    text-align: center;
+    font-size: 1rem;
+
+    a {
+      text-decoration: none;
+      color: $color__primary;
+
+      &:hover {
+        color: $color__primary--hover;
+      }
+
+    }
+  }
+
+  &__address {
+    & p:first-child {
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-top: 0;
+      @include breakpoint($md) {
+        font-size: 1.3rem;
+      } 
+    }
+    @include breakpoint($md) {
+      font-size: 1.1rem;
+    } 
+    text-align: center;
+  }
+}
