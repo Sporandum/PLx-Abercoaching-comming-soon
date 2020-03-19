@@ -3,6 +3,7 @@
 /**
  * Plugin Name: Abercoaching - Comming-soon
  * Description: Activez ce plugin pour renvoyer les visiteurs non connecté vers une page comming-soon.
+ * Version: 0.0.1
  */
 
 function redirect_comming_soon()
